@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Flappy Bird</h1>
+        <canvas id="gameCanvas"></canvas>
+        
+        <div id="menu">
+            <button id="easy-mode">Modo Easy</button>
+            <button id="hard-mode">Modo Hard</button>
+            <button id="pro-mode">Modo Hardcore (Pro)</button>
+        </div>
+
+        <div id="game-over" class="hidden">
+            <p id="finalScore"></p>
+            <button id="try-again">Tentar Novamente</button>
+            <button id="buy-pro">Comprar Versão Pro</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
