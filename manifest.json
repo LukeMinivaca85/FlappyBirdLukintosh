@@ -1,0 +1,22 @@
+{
+  "name": "Flappy Bird Lukintosh",
+  "short_name": "FlappyBird",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffcc00",
+  "description": "Jogue Flappy Bird estilo Lukintosh direto no seu PC!",
+  "icons": [
+    {
+      "src": "/FlappyBirdApp.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/FlappyBirdApp-256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ],
+  "lang": "pt-BR"
+}

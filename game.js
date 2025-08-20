@@ -1,3 +1,4 @@
+let isProVersion = false; // mudar para true na versão Pro
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
@@ -134,9 +135,25 @@ function gameLoop() {
 
 document.getElementById("easy-mode").addEventListener("click", () => startGame("easy"));
 document.getElementById("hard-mode").addEventListener("click", () => startGame("hard"));
-document.getElementById("pro-mode").addEventListener("click", () => startGame("pro"));
+document.getElementById("pro-mode").addEventListener("click", () => {
+  if (!isProVersion) {
+    alert("Modo Hardcore é exclusivo da versão Pro. Compre para desbloquear!");
+    return;
+  }
+  startGame("pro");
+});
+
 
 document.getElementById("try-again").addEventListener("click", restartGame);
 document.getElementById("buy-pro").addEventListener("click", () => {
-  alert("Você comprou a versão Pro! Agora jogue o Modo Hardcore!");
+  isProVersion = true;
+  alert("Versão Pro ativada! Agora você pode jogar o Modo Hardcore.");
 });
+
+window.onload = () => {
+  if (!isProVersion) {
+    const proBtn = document.getElementById("pro-mode");
+    proBtn.innerText += " 🔒";
+    proBtn.style.backgroundColor = "#888";
+  }
+};
